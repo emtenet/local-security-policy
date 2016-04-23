@@ -11,16 +11,26 @@ When you just want to enable one policy on your personal PC even the existing to
 
 ## Why?
 
-I wanted to use [Erlang](http://www.erlang.org/)'s
+I wanted to use 
+[Erlang](http://www.erlang.org/)'s
 [file:make_link/2](http://erlang.org/doc/man/file.html#make_symlink-2)
-on Windows.
+on Windows in the context of
+[rebar3](https://www.rebar3.org/)
+and
+[relx](http://erlware.github.io/relx/) releases.
 
 But, users need *SeCreateSymbolicLinkPrivilege* or *Run as Administrator* to make symbolic links.
 This tool allows us to add that privilege with `lsp /A user SeCreateSymbolicLinkPrivilege`.
 
-NOTE: Users in the *Administrators* group are not helped by giving them this privilege, they still need to *Run as Administrator* or accept a UAC prompt to make symbolic links.
+> **NOTE:** Users in the *Administrators* group are not helped by giving them this privilege
+> , they still need to *Run as Administrator* or accept a UAC prompt to make symbolic links.
 
-I am trialing non-Administrator user account (recommended by Windows) with *SeCreateSymbolicLinkPrivilege* that gives me easy access to symbolic links and a special Administrator user (with its own password) for use when elevating to an Administrator. A bit of extra typing (the admin passwor) when accepting a UAC prompt, but maybe that is more secure as well.
+I am trialing non-Administrator user account (recommended by Windows) with 
+*SeCreateSymbolicLinkPrivilege* that gives me easy access to symbolic links 
+and a special Administrator user (with its own password) for use when 
+elevating to an Administrator.
+A bit of extra typing (the admin passwor) when accepting a UAC prompt
+, but maybe that is more secure as well.
 
 ## The command line
 
